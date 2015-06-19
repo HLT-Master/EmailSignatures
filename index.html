@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#result").hide();
+	$("#submit").click(function () {
+    	$("#input_name").html($("#name").val());
+    	$("#input_title").html($("#title").val());
+    	var office1 = $("#office1").val();
+    	var office2 = $("#office2").val();
+    	var office3 = $("#office3").val();
+    	var office4 = $("#office4").val();
+    	$("#input_office").attr("href", "tel:" + office1 + "." + office2 + "." + office3 + "." + office4).val("+" + office1 + office2 + office3 + office4).html(office1 + "." + office2 + "." + office3 + "." + office4);
+    	var mobile1 = "1";
+    	var mobile2 = $("#mobile2").val();
+    	var mobile3 = $("#mobile3").val();
+    	var mobile4 = $("#mobile4").val();
+    	$("#input_cell").attr("href", "tel:" + mobile2 + "." + mobile3 + "." + mobile4).val("+" + mobile1 + mobile2 + mobile3 + mobile4).html("<wbr>" + mobile2 + "." + mobile3 + "." + mobile4);
+    	$("#link").attr("href", "data:text/html;charset=utf-8, " + document.getElementById("output").innerHTML);
+    	$("#result").show();
+	});
+var result = document.getElementById('result');
+var a = result.appendChild(document.createElement("a"));
+a.id = "link"
+a.download = "signature.html";
+a.href = "data:text/html;charset=utf-8, " + document.getElementById("output").innerHTML;
+a.innerHTML = "[Export Signature]";
+});
+</script>
+</head>
+<body>
+    <form id="form">Name:
+        <br/>
+        <input type="text" name="name" id="name" />
+        <br/>Title:
+        <br/>
+        <input type="text" name="title" id="title" />
+        <br/>Office Phone:
+        <br/>
+        <input type="number" name="office1" id="office1" min="0" max="9" value="1" />
+        <input type="number" name="office2" id="office2" min="100" max="999" value="872" />
+        <input type="number" name="office3" id="office3" min="100" max="999" value="228" />
+        <input type="number" name="office4" id="office4" min="1000" max="9999" value="5210" />
+        <br/>Mobile Phone:
+        <br/>
+        <input type="number" name="mobile2" id="mobile2" min="100" max="999" />
+        <input type="number" name="mobile3" id="mobile3" min="100" max="999" />
+        <input type="number" name="mobile4" id="mobile4" min="1000" max="9999" />
+        <br/>
+        <br/>
+    </form>
+    <button id="submit">Submit</button>
+    <div id="result">
+        <div id="output">
+            <div>
+                <p><span style="border-collapse:collapse;font-family:'Droid Sans',arial,sans-serif;font-size:13px"><span style="font-family:arial,sans-serif;border-collapse:collapse"></span></span>
+                </p>
+                <div style="margin:0px 0px 8px">
+                    <table border="0" style="font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34)">
+                        <tbody>
+                            <tr>
+                                <td style="font-family:arial,sans-serif;margin:0px"><a title="Higher Learning Technologies" href="http://hltcorp.com/" style="color:rgb(17,85,204)" target="_blank"><img src="https://s-media-cache-ak0.pinimg.com/736x/f0/e4/75/f0e47576a2b6a1a6732336cb4ad80352.jpg" alt="Higher Learning Technologies" height="60" ></a>
+
+                                    <td width="200px" style="font-family:arial,sans-serif;margin:0px">	<span style="color:rgb(30,74,90);font-family:Helvetica,sans-serif">
+                        					<br>
+                        					<b>
+                        					<font size="4" id="input_name"></font>
+                        					</b>
+                        					<br>
+                        				</span>
+											<span style="font-family:Helvetica,sans-serif;color:rgb(30,74,90);font-size:small" id="input_title">
+                        				</span>
+
+                                    </td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table><font face="verdana, sans-serif" style="font-size:13.333333969116211px"><hr size="1" style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34);min-height:1px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:solid;border-top-color:rgb(229,229,229);margin:0.5em 0px;padding:0px"><p style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;margin:0px"><span style="color:rgb(103,128,135);font-size:small">Office&nbsp;</span><span style="color:rgb(113,179,227);font-size:small"><span title="Call with Google Voice"><span title="Call with Google Voice"><a id="input_office" target="_blank"></a></span></span></span><span style="font-size:small;color:rgb(103,128,135)">&nbsp;&nbsp;&nbsp;Mobile<span>&nbsp;</span></span><span style="font-size:small"><font color="#71b3e3"><span title="Call with Google Voice"><span title="Call with Google Voice"><a id="input_cell" target="_blank"></a></span></span></font>
+
+                    </span>
+                    </p>
+                    <hr size="1" style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34);min-height:1px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:solid;border-top-color:rgb(229,229,229);margin:0.5em 0px;padding:0px">
+                    <p style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34);margin:0px"><span style="font-size:small;color:rgb(128,128,128)"><a title="Click here for directions to HLT Headquarters" href="http://goo.gl/SywBfr" style="color:rgb(30,74,90);text-decoration:initial" target="_blank">Higher Learning Technologies<br />2500 Crosspark Rd, BVC Ste W240<br />Coralville, IA 52241</a></span>
+
+                    </p>
+                    <p style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34);margin:0px"><i style="color:rgb(0,0,0);font-family:Helvetica;font-size:12px"><font size="1">Winner of the Corridor Business Journal's<br /> Coolest Place to Work award</a>.</font></i>
+
+                    </p>
+                    <hr size="1" style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34);min-height:1px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-style:solid;border-top-color:rgb(229,229,229);margin:0.5em 0px;padding:0px">
+                    <div style="font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif;color:rgb(34,34,34);clear:both"></div>
+                    </font>
+                </div>	<font face="verdana, sans-serif" style="font-size:13.333333969116211px"><a href="https://www.facebook.com/HigherLearningTechnologies" style="color:rgb(17,85,204);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif" target="_blank"><img width="16" height="16" alt="Facebook" border="0" src="https://s3.amazonaws.com/images.wisestamp.com/facebook.png" style="padding:0px 0px 5px;vertical-align:middle"></a><span style="color:rgb(34,34,34);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif">&nbsp;</span><a href="http://www.twitter.com/higherlearntech" style="color:rgb(17,85,204);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif" target="_blank"><img width="16" height="16" alt="Twitter" border="0" src="https://s3.amazonaws.com/images.wisestamp.com/twitter.png" style="padding:0px 0px 5px;vertical-align:middle"></a><span style="color:rgb(34,34,34);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif">&nbsp;</span><a href="https://plus.google.com/+Hltcorp" style="color:rgb(17,85,204);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif" target="_blank"><img width="16" height="16" alt="Twitter" border="0" src="https://s3.amazonaws.com/images.wisestamp.com/googleplus.png" style="padding:0px 0px 5px;vertical-align:middle"></a><span style="color:rgb(34,34,34);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif">&nbsp;</span><a href="http://www.linkedin.com/company/higher-learning-technologies" style="color:rgb(17,85,204);font-size:13.333333969116211px;font-family:Verdana,Arial,Helvetica,sans-serif" target="_blank"><img width="16" height="16" alt="LinkedIn" border="0" src="https://s3.amazonaws.com/images.wisestamp.com/linkedin.png" style="padding:0px 0px 5px;vertical-align:middle"></a><p></p></font>
+
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+* {
+  font-family: 'Open Sans', sans-serif; }
+
+html, body {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+html, body, #root {
+  height: 100%; }
+
+.signature-form {
+  margin: 0 auto 3rem;
+  width: 12.25rem; }
+
+h1 {
+  margin: 6.75rem auto 1.5rem;
+  text-align: center; }
+
+form {
+  margin: 0;
+  padding: 0; }
+
+label {
+  color: black;
+  display: block;
+  font-weight: 600; }
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 0.875rem;
+  margin: 0.25rem 0 0.75rem 0;
+  outline: none !important;
+  padding: 0.5rem; }
+
+.name-field, .email-field {
+  width: 100%; }
+
+.button {
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto 0.75rem;
+  padding: 0.625rem;
+  text-align: center;
+  outline: none; }
+  .button:active {
+    opacity: 0.8; }
+
+.signature {
+  margin: 0 auto 3rem;
+  max-width: 43.75rem; }

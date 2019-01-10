@@ -1,0 +1,76 @@
+@function rem-calc($px) {
+  $rem: $px / 16;
+  @return #{$rem}rem;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.signature-form {
+  margin: 0 auto rem-calc(48);
+  width: rem-calc(196);
+}
+
+h1 {
+  margin: rem-calc(108) auto rem-calc(24);
+  text-align: center;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+label{
+  color: black;
+  display: block;
+  font-weight: 600;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: rem-calc(14);
+  margin: rem-calc(4) 0 rem-calc(12) 0;
+  outline: none !important;
+  padding: rem-calc(8);
+}
+
+.name-field, .email-field {
+  width: 100%;
+}
+
+.button {
+  display: block;
+  border: none;
+  width: 100%;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin: 0 auto rem-calc(12);
+  padding: rem-calc(10);
+  text-align: center;
+  outline: none;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.signature {
+  margin: 0 auto rem-calc(48);
+  max-width: rem-calc(700);
+}
